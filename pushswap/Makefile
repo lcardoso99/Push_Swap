@@ -1,4 +1,4 @@
-SRCS		= make_stack.c pushswap.c
+SRCS		= make_stack.c 
 
 OBJS		= ${SRCS:.c=.o}
 
@@ -23,11 +23,11 @@ libft:
 $(NAME):	libft ${OBJS}
 			cp libft/libft.a ${NAME}
 			${CC} -c ${CFLAGS} ${INCLUDES} ${SRCS}
-			/*ar rc ${NAME} ${OBJS}
-			ranlib ${NAME}*/
+			ar rc ${NAME} ${OBJS}
+			ranlib ${NAME}
 
 test:		${NAME}
-			@${CC} ${CFLAGS} ${NAME} -o result
+			@${CC} ${CFLAGS} push_swap.c ${NAME} -o result
 
 all:		${NAME}
 

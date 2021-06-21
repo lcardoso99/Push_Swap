@@ -26,14 +26,14 @@ t_stack *create_new_node(void)
 	return (first);
 }
 
-t_stack *arg_to_stack(int ac, char **av)
+t_stack *args_to_stack(int ac, char **av)
 {
 	int	i;
 	t_stack	*first;
 	t_stack *tmp;
 
 	i = 1;
-	first = create_node();
+	first = create_new_node();
 	tmp = first;
 	while(i < ac)
 	{
@@ -41,12 +41,12 @@ t_stack *arg_to_stack(int ac, char **av)
 		tmp->num = ft_atoi(av[i]);
 		if (i < ac - 1)
 		{
-			tmp->next = create_node();
+			tmp->next = create_new_node();
 			tmp = tmp->next;
 			tmp->diff = 1;
 		}
 		i++;
 	}
-	doubles_checker(&first);
+	//doubles_checker(&first);
 	return(first);
 }

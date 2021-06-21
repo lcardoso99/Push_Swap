@@ -1,16 +1,18 @@
+#include "includes/pushswap.h"
+
 int main(int ac, char **av)
 {
 	t_stack *sta;
-	t_stack *stb;
-	int len;
+	//t_stack *stb;
+	//int len;
 
 	if(!(sta = args_to_stack(ac, av)))
 	{
 		write(2, "Error\n", 6); //not necessary, but the return(0) is;
 		return (0);
 	}
-	len = s_len(sta);
-	stb = NULL;
+	//len = s_len(sta);
+	/*stb = NULL;
 	//result = new_result();
 	if (len < 4)
 	{
@@ -21,7 +23,13 @@ int main(int ac, char **av)
 	else
 		stack_sorter(&sta,&stb,&result,len);
 	print_result(result->final);
+	*/
 	stack_del(&sta);
-	free(result);
+	while (sta->next)
+	{
+		ft_putnbr_fd(sta->num, 1);
+		sta++;// = sta->next;
+	}
+	//free(result);
 	return(0);
 }
