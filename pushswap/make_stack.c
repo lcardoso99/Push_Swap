@@ -36,8 +36,7 @@ t_stack *args_to_stack(int ac, char **av)
 	first = create_new_node();
 	tmp = first;
 	while(i < ac)
-	{
-		
+	{		
 		tmp->num = ft_atoi(av[i]);
 		if (i < ac - 1)
 		{

@@ -22,14 +22,14 @@ int main(int ac, char **av)
 	}
 	else
 		stack_sorter(&sta,&stb,&result,len);
-	print_result(result->final);
 	*/
-	stack_del(&sta);
 	while (sta->next)
 	{
 		ft_putnbr_fd(sta->num, 1);
-		sta++;// = sta->next;
+		sta = sta->next;
 	}
+	ft_putnbr_fd(sta->num, 1);
+	stack_del(&sta);
 	//free(result);
 	return(0);
 }

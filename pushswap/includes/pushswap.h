@@ -20,6 +20,14 @@ typedef struct s_result
 
 t_stack *args_to_stack(int ac, char **av);
 t_stack *create_new_node(void);
-void    stack_del(t_stack **stack);
+void	stack_del(t_stack **stack);
+void	swapper(int *a, int *b);
+int	swap(t_stack **head);
+int	push(t_stack **hdst, t_stack **hsrc);
+int rotate(t_stack **head);
+int rev_rotate(t_stack **head);
+int	ss(t_stack **s1, t_stack **s2);
+int rr(t_stack **s1, t_stack **s2);
+int rrr(t_stack **s1, t_stack **s2);
 
 #endif 
