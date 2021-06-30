@@ -30,5 +30,6 @@ int	ss(t_stack **s1, t_stack **s2);
 int rr(t_stack **s1, t_stack **s2);
 int rrr(t_stack **s1, t_stack **s2);
 int	stacksize(t_stack *stack);
+void    short_sort(t_stack **stack, int len);
 
 #endif 

@@ -11,7 +11,7 @@ int main(int ac, char **av)
 		write(2, "Error\n", 6); //not necessary, but the return(0) is;
 		return (0);
 	}
-	len = stack_size(sta);
+	len = stacksize(sta);
 	/*stb = NULL;
 	result = new_result();*/
 	if (len < 4)
