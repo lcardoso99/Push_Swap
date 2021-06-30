@@ -1,4 +1,4 @@
-SRCS		= make_stack.c 
+SRCS		= make_stack.c ft_pswaptools.c 
 
 OBJS		= ${SRCS:.c=.o}
 

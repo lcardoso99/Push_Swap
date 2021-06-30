@@ -29,5 +29,6 @@ int rev_rotate(t_stack **head);
 int	ss(t_stack **s1, t_stack **s2);
 int rr(t_stack **s1, t_stack **s2);
 int rrr(t_stack **s1, t_stack **s2);
+int	stacksize(t_stack *stack);
 
 #endif 
