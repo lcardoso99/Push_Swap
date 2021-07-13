@@ -8,11 +8,10 @@ void	short_sort(t_stack **stack, int len)
 		printf("sa\n");
 	else if (len == 3)
 	{
-		if ((*stack)->num < (*stack)->next->num && (*stack)->next->num >
-		(*stack)->next->next->num &&
-		(*stack)->num < (*stack)->next->next->num)
-			printf("sa\nra\n");
-		if ((*stack)->num > (*stack)->next->num && 
+		if ((*stack)->num < (*stack)->next->next->num && 
+			(*stack)->next->num > (*stack)->next->next->num) //132
+			rotate(stack);
+		else if ((*stack)->num > (*stack)->next->num && 
 			(*stack)->num < (*stack)->next->next->num) //213
 			printf("sa\n");
 		else if ((*stack)->num > (*stack)->next->num &&

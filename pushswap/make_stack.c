@@ -21,6 +21,7 @@ t_stack *create_new_node(void)
 
 	first = (t_stack *)malloc(sizeof(t_stack));
 	first->num = 0;
+	first->id = 'a';
 	first->diff = 1;
 	first->next = NULL;
 	return (first);
